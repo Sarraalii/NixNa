@@ -1,0 +1,86 @@
+---
+title: "NixNA"
+format: revealjs
+editor: visual
+---
+
+# NixNa (*Remove your NAs in one second)*
+
+Why NixNa
+
+-   Dealing with missing data is an important step in data cleaning
+
+-   With a large data set we might need to remove rows with Nas
+
+-   This will clean our data and prepare us for the next steps
+
+## Install the Package
+
+Install and load the NixNa package from CRAN
+
+install the development version from GitHub
+
+devtools::install_github("sarraalii/NixNa")
+
+library(NixNa)
+
+# Function 1
+
+trimNa: Remove rows with missing values conditional on a specified column
+
+## Example trimNA()
+
+-   Testing the trimNa function to remove countries with missing MatMort values
+
+-    finaldata1 \<- trimna(finaldata, target_col = "country_name", condition_col = "MatMort")
+
+This will remove rows from country_name column conditional on MatMort missing data
+
+# Function 2
+
+trimcovNa: Remove rows with missing values in specified covariate column
+
+## Example trimcovNa()
+
+-    Test by defining the target column and covariate columns
+
+-   
+target_column \<- "country_name"
+
+-   covariate_columns \<- c("GDP", "male_edu", "temp")
+
+
+-    Use the redefined function to clean the finaldata dataset
+
+-   cleaned_covariates \<- trimcovNa(finaldata, target_col = target_column, covariate_cols = covariate_columns)
+
+
+
+
+## Data Description
+
+finaldata loads with the package
+
+|                                                                                                                                                                                                                                     |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data to demonstrate the trimNa and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators. |
+
+## Conclusion
+
+-   Data cleanliness is essential for accurate and reliable results in data analysis.
+
+-   Care should be taken to choose appropriate methods for handling missing data based on the nature of the dataset and the analysis goals.
+
+-   The process of handling missing data is a key preprocessing step that contributes to the overall data quality and integrity.
+
+-   A well-cleaned dataset sets the foundation for effective and meaningful insights during the data analysis pipeline.
+
+## Resources
+
+-   [Official Documentation](link-to-documentation)
+
+-   [Github Respository](https://github.com/Sarraalii/NixNa.git)
+
+-   [Data Source](https://pubmed.ncbi.nlm.nih.gov/34582455/)
+
+    # Thank you
