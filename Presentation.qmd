@@ -18,7 +18,6 @@ Why NixNa
 
 ## Install the Package
 
-Install and load the NixNa package from CRAN
 
 install the development version from GitHub
 
@@ -37,6 +36,7 @@ trimun: Remove Rows for Unique Values with Missing Covariates
 -   Specify the column and covariates unique_column \<- "country_name" covariates \<- c("GDP", "popdens", "urban", "male_edu" Call the function cleaned_data \<- trimun(conflictdata, unique_column, covariates)
 
 This will remove rows from all unique countries if it had any missing in the defined covariates
+
 
 # Function 2
 
