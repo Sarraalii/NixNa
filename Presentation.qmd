@@ -32,7 +32,7 @@ trimNa: Remove rows with missing values conditional on a specified column
 
 -   Testing the trimNa function to remove countries with missing MatMort values
 
--    finaldata1 \<- trimna(finaldata, target_col = "country_name", condition_col = "MatMort")
+-   finaldata1 \<- trimna(finaldata, target_col = "country_name", condition_col = "MatMort")
 
 This will remove rows from country_name column conditional on MatMort missing data
 
@@ -42,27 +42,22 @@ trimcovNa: Remove rows with missing values in specified covariate column
 
 ## Example trimcovNa()
 
--    Test by defining the target column and covariate columns
+-   Test by defining the target column and covariate columns
 
--   
-target_column \<- "country_name"
+-   target_column \<- "country_name"
 
 -   covariate_columns \<- c("GDP", "male_edu", "temp")
 
-
--    Use the redefined function to clean the finaldata dataset
+-   Use the redefined function to clean the finaldata dataset
 
 -   cleaned_covariates \<- trimcovNa(finaldata, target_col = target_column, covariate_cols = covariate_columns)
-
-
-
 
 ## Data Description
 
 finaldata loads with the package
 
 |                                                                                                                                                                                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------|
 | Data to demonstrate the trimNa and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators. |
 
 ## Conclusion

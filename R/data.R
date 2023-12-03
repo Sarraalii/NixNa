@@ -10,11 +10,11 @@
 
 #' @examples
 #'   Load the data
-#'   data("finaldata")
-#'   str(finaldata)
+#'   data("conflictdata")
+#'   str(conflictdata)
 
 #'  Test the trimNa function to remove countries with missing MatMort values
-#'   finaldata1 <- trimna(finaldata, target_col = "country_name", condition_col = "MatMort")
+#'   finaldata1 <- trimna(conflictdata, target_col = "country_name", condition_col = "MatMort")
 #' This will remove rows from country_name column conditional on MatMort missing data
 
 
@@ -23,8 +23,18 @@
 #' covariate_columns <- c("GDP", "male_edu", "temp")
 
 #' Use the redefined function to clean the covariates dataset
-#' cleaned_covariates <- trimcovNa(finaldata, target_col = target_column, covariate_cols = covariate_columns)
+#' cleaned_covariates <- trimcovNa(conflictdata, target_col = target_column, covariate_cols = covariate_columns)
 #' This will remove rows from country_name if any of the covariates have a missing value
+#' @example   Specify the column and covariates
+#'unique_column <- "country_name"
+#' covariates <- c("GDP", "popdens", "urban", "male_edu")
+
+# Call the function
+#' cleaned_data <- trimun(conflictdata, unique_column, covariates)
+
+# Print the cleaned data
+#' print(cleaned_data)
+#'
 
 #' End of Data Documentation
-"finaldata"
+"conflictdata"
