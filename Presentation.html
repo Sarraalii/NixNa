@@ -332,11 +332,11 @@
 </section>
 <section>
 <section id="nixna-remove-your-nas-in-one-second" class="title-slide slide level1 center">
-<h1>NixNa (<em>Remove your NAs in one second)</em></h1>
+<h1>NixNa (<em>Remove your NA’s in one second)</em></h1>
 <p>Why NixNa</p>
 <ul>
 <li><p>Dealing with missing data is an important step in data cleaning</p></li>
-<li><p>With a large data set we might need to remove rows with Nas</p></li>
+<li><p>With a large data set we might need to remove rows with NA’s, but our approaches may vary according to the goal of the analyis</p></li>
 <li><p>This will clean our data and prepare us for the next steps</p></li>
 </ul>
 </section>
@@ -350,15 +350,15 @@
 <section>
 <section id="function-1" class="title-slide slide level1 center">
 <h1>Function 1</h1>
-<p>trimNa: Remove rows with missing values conditional on a specified column</p>
+<p>trimun: Remove Rows for Unique Values with Missing Covariates</p>
 </section>
-<section id="example-trimna" class="slide level2">
-<h2>Example trimNA()</h2>
+<section id="example-trimun" class="slide level2">
+<h2>Example trimun()</h2>
 <ul>
-<li><p>Testing the trimNa function to remove countries with missing MatMort values</p></li>
-<li><p>finaldata1 &lt;- trimna(finaldata, target_col = “country_name”, condition_col = “MatMort”)</p></li>
+<li><p>Testing the trimun function to remove all countries if atleast one of them has a missing value in a define covariate colum</p></li>
+<li><p>Specify the column and covariates unique_column &lt;- “country_name” covariates &lt;- c(“GDP”, “popdens”, “urban”, “male_edu” Call the function cleaned_data &lt;- trimun(conflictdata, unique_column, covariates)</p></li>
 </ul>
-<p>This will remove rows from country_name column conditional on MatMort missing data</p>
+<p>This will remove rows from all unique countries if it had any missing in the defined covariates</p>
 </section></section>
 <section>
 <section id="function-2" class="title-slide slide level1 center">
@@ -371,20 +371,20 @@
 <li><p>Test by defining the target column and covariate columns</p></li>
 <li><p>target_column &lt;- “country_name”</p></li>
 <li><p>covariate_columns &lt;- c(“GDP”, “male_edu”, “temp”)</p></li>
-<li><p>Use the redefined function to clean the finaldata dataset</p></li>
-<li><p>cleaned_covariates &lt;- trimcovNa(finaldata, target_col = target_column, covariate_cols = covariate_columns)</p></li>
+<li><p>Use the redefined function to clean the conflictdata dataset</p></li>
+<li><p>cleaned_covariates &lt;- trimcovNa(conlifctdata, target_col = target_column, covariate_cols = covariate_columns)</p></li>
 </ul>
 </section>
 <section id="data-description" class="slide level2">
 <h2>Data Description</h2>
-<p>finaldata loads with the package</p>
+<p>conflict data loads with the package</p>
 <table>
 <colgroup>
 <col style="width: 100%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Data to demonstrate the trimNa and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators.</td>
+<td>Data to demonstrate the trimun and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators.</td>
 </tr>
 </tbody>
 </table>

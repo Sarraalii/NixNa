@@ -1,18 +1,20 @@
 ---
 title: "NixNA"
-format: revealjs
-editor: visual
+format:
+  revealjs: 
+    theme: solarized
 ---
 
-# NixNa (*Remove your NAs in one second)*
+# NixNa (*Remove your NA's in one second)*
 
 Why NixNa
 
 -   Dealing with missing data is an important step in data cleaning
 
--   With a large data set we might need to remove rows with Nas
+-   With a large data set we might need to remove rows with NA's, but our approaches may vary according to the goal of the analyis
 
--   This will clean our data and prepare us for the next steps
+-   This will clean our data and prepare us for the next steps 
+
 
 ## Install the Package
 
@@ -32,11 +34,7 @@ trimun: Remove Rows for Unique Values with Missing Covariates
 
 -   Testing the trimun function to remove all countries if atleast one of them has a missing value in a define covariate colum
 
--    Specify the column and covariates
-    unique_column \<- "country_name"
-    covariates \<- c("GDP", "popdens", "urban", "male_edu"
-    Call the function
-    cleaned_data \<- trimun(conflictdata, unique_column, covariates)
+-   Specify the column and covariates unique_column \<- "country_name" covariates \<- c("GDP", "popdens", "urban", "male_edu" Call the function cleaned_data \<- trimun(conflictdata, unique_column, covariates)
 
 This will remove rows from all unique countries if it had any missing in the defined covariates
 
@@ -52,9 +50,9 @@ trimcovNa: Remove rows with missing values in specified covariate column
 
 -   covariate_columns \<- c("GDP", "male_edu", "temp")
 
--   Use the redefined function to clean the finaldata dataset
+-   Use the redefined function to clean the conflictdata dataset
 
--   cleaned_covariates \<- trimcovNa(finaldata, target_col = target_column, covariate_cols = covariate_columns)
+-   cleaned_covariates \<- trimcovNa(conlifctdata, target_col = target_column, covariate_cols = covariate_columns)
 
 ## Data Description
 
