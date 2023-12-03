@@ -26,15 +26,19 @@ library(NixNa)
 
 # Function 1
 
-trimNa: Remove rows with missing values conditional on a specified column
+trimun: Remove Rows for Unique Values with Missing Covariates
 
-## Example trimNA()
+## Example trimun()
 
--   Testing the trimNa function to remove countries with missing MatMort values
+-   Testing the trimun function to remove all countries if atleast one of them has a missing value in a define covariate colum
 
--   finaldata1 \<- trimna(finaldata, target_col = "country_name", condition_col = "MatMort")
+-    Specify the column and covariates
+    unique_column \<- "country_name"
+    covariates \<- c("GDP", "popdens", "urban", "male_edu"
+    Call the function
+    cleaned_data \<- trimun(conflictdata, unique_column, covariates)
 
-This will remove rows from country_name column conditional on MatMort missing data
+This will remove rows from all unique countries if it had any missing in the defined covariates
 
 # Function 2
 
@@ -54,11 +58,11 @@ trimcovNa: Remove rows with missing values in specified covariate column
 
 ## Data Description
 
-finaldata loads with the package
+conflict data loads with the package
 
 |                                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------|
-| Data to demonstrate the trimNa and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators. |
+| Data to demonstrate the trimun and trimcovNa function Description: Data for 181 countries from the Uppsala Conflict Data Program and World Bank for the years 2000 to 2019. The dataset includes various socio-economic indicators. |
 
 ## Conclusion
 
