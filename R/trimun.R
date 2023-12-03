@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' # Load the trimun package
+#' # Load the NixNA package
 #' library(trimun)
 #'
 #' # Specify the column and covariates
