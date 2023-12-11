@@ -75,6 +75,22 @@ covariate column has a missing value.</p>
 <p>A data frame with rows removed.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Load the NixNA package</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">trimcovna</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Specify the target column and covariates</span></span></span>
+<span class="r-in"><span><span class="va">target_column</span> <span class="op">&lt;-</span> <span class="st">"country_name"</span></span></span>
+<span class="r-in"><span><span class="va">covariate_columns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="st">"popdens"</span>, <span class="st">"urban"</span>, <span class="st">"male_edu"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Call the function</span></span></span>
+<span class="r-in"><span><span class="va">cleaned_data</span> <span class="op">&lt;-</span> <span class="fu">trimcovNa</span><span class="op">(</span><span class="va">conflictdata</span>, <span class="va">target_column</span>, <span class="va">covariate_columns</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
