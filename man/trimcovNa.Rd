@@ -20,3 +20,17 @@ A data frame with rows removed.
 This function removes rows from a column in the data frame where a specified
 covariate column has a missing value.
 }
+\examples{
+\dontrun{
+# Load the NixNA package
+library(trimcovna)
+
+# Specify the target column and covariates
+target_column <- "country_name"
+covariate_columns <- c("GDP", "popdens", "urban", "male_edu")
+
+# Call the function
+cleaned_data <- trimcovNa(conflictdata, target_column, covariate_columns)
+}
+
+}
