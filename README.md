@@ -4,10 +4,12 @@
 
 NixNa is an R package designed to efficiently handle missing data, providing two essential functions: `trimcovNa()` and `trimun()`. These functions focus on removing rows with missing values in specified covariate columns and handling unique values with missing covariates, respectively.
 
+```R
 install.packages("devtools")
 library(dev tools)
 devtools::install_github("sarraalii/NixNa")
 library(Nixna)
+```
 
 ### 1. `trimcovNa()`
 
