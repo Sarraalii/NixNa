@@ -35,13 +35,6 @@ covariates <- c("GDP", "pops", "urban", "male_edu")
 cleaned_data <- trimun(conflict data, unique_column, covariates)
 ```
 
-## Installation
-
-You can install NixNa using the `devtools` package:
-
-```R
-devtools::install_github("your_username/nixna")
-```
 
 
 ## Contributing
